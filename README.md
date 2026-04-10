@@ -31,7 +31,32 @@ npm start
 cd frontend
 npm install
 npm run dev
+
+# Para mantener el servidor activo en segundo plano:
+nohup npm run dev > /tmp/vite.log 2>&1 &
 ```
+
+## Solución de problemas
+
+Si el navegador no puede cargar la página:
+
+1. Verificar que el backend esté corriendo:
+   ```bash
+   curl http://localhost:3000/api/tasks
+   ```
+
+2. Verificar que el frontend esté corriendo:
+   ```bash
+   curl http://localhost:5173/
+   ```
+
+3. Si hay error de puerto, especificar el puerto manualmente en `frontend/vite.config.ts`:
+   ```typescript
+   server: {
+     port: 5173,
+     // ...
+   }
+   ```
 
 ## Bugs intencionales (8)
 
