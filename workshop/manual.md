@@ -27,6 +27,7 @@
 ```bash
 # 1. Instalar OpenCode (Linux/macOS/WSL)
 curl -fsSL https://opencode.ai/install | bash
+Windows 
 
 # Verificar instalación
 opencode --version

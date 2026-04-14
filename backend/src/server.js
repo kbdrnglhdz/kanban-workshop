@@ -4,6 +4,10 @@ const app = express();
 app.use(express.json());
 app.use(express.static('../frontend/dist'));
 
+app.get('/api/hola', (req, res) => {
+  res.json({ message: "Hola Opencode" });
+});
+
 app.get('/tasks', (req, res) => {
   db.all("SELECT id, title, status, [order] FROM tasks ORDER BY [order]", (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });
