@@ -49,7 +49,6 @@ cd frontend && npm install
 2. **POST /tasks** - No valida `title` vacío ni `status` inválido
 3. **PUT /tasks/:id** - No reordena tareas al actualizar `[order]`
 4. **DELETE /tasks/:id** - Soft delete (marca `deleted_at`) pero GET no filtra
-
 ### Frontend
 5. **Drag & drop** - Duplica o pierde tareas al mover
 6. **Botón Eliminar** - Sin confirmación

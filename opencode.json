@@ -8,5 +8,23 @@
     },
     "read": "allow",
     "grep": "allow"
-  }
+  },
+  "mcp": {
+  "context7": {
+    "type": "remote",
+    "url": "https://mcp.context7.com/mcp"
+  },
+  "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "enabled": true,
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "TOKEN"
+      }
+    }
+}
 }
